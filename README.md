@@ -14,12 +14,12 @@ Click one to read it, or scroll to it!
 As you read in the intro, this library can stop your page from cacheing while keeping the user experience exactly the same and not affecting browser performance.
 
 However, on this section, you can see why this is and what is does (in non-technical, easy-to-understand terms):
-
+ 
 ---
 - **Q:** So, how exactly does Cachebuster.js keep your browser nice and steady while giving the user an experience exactly the same as normal?
 - **A:** Cachbuster.js is written in a way the browser can easily execute without lagging, because it uses minimal code.
 
-
+ 
 ---
 - **Q:** How does it work?
 - **A:** Cachbuster.js simply does this:
@@ -38,16 +38,33 @@ In order to add Cachebuster.js to your website, you must simply add a script wit
 </head>
 ```
 
-If you don't want to host the code directly on your server, there's a couple CDN's availible for you:
+If you don't want to host the code directly on your server, there's a couple CDNs availible for you:
 
-- ```https://cdn.jsdelivr.net/gh/codecool123/cachebuster.js@main/cachebuster.js```
-- ```https://raw.githubusercontent.com/codecool123/cachebuster.js/refs/heads/main/cachebuster.js```
+- ```url
+  https://cdn.jsdelivr.net/gh/codecool123/cachebuster.js@main/cachebuster.js
+  ```
+- ```url
+  https://raw.githubusercontent.com/codecool123/cachebuster.js/refs/heads/main/cachebuster.js
+  ```
 
 You can also edit the code to check an API of your choice for a true/false response to cache or not. This may be handy.
-
-
+ 
+---
 Now, to describe what the code does:
+
 
 In a step by step order, it would look something like this:
 
-- Check for the `?cachebust_id=` in the URL.
+1. Check for the `?cachebust_id=` in the URL.
+2. If it's absent, create a UUID and redirect to the same link with the `?cachebust_id=` followed by the UUID (it must be a redirect to trick the browser into thinking the page is different)
+3. If it *is* there, then remove the `?cachebust_id` parameter *without* redirecting.
+
+If you want to understand the code better, you can read it here:
+- [Cachebuster.js](cachebuster.js) — Easy to read code, reccomended (*Be Warned*: the code will run faster when using the minified version)
+- [Cachebuster.min.js](cachebuster.min.js) — Minified version (use this in your website for good browser performance)
+
+That's it! Now you've got a never-cached website at your fingertips.
+Thanks for using Cachebuster.js! Have a nice day.
+ 
+---
+See the [LICENSE](LICENSE) for usage details.
