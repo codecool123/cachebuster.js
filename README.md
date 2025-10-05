@@ -41,10 +41,10 @@ In order to add Cachebuster.js to your website, you must simply add a script wit
 If you don't want to host the code directly on your server, there's a couple CDNs availible for you:
 
 - ```url
-  https://cdn.jsdelivr.net/gh/codecool123/cachebuster.js@main/cachebuster.js
+  https://cdn.jsdelivr.net/gh/codecool123/cachebuster.js@main/cachebuster.min.js
   ```
 - ```url
-  https://raw.githubusercontent.com/codecool123/cachebuster.js/refs/heads/main/cachebuster.js
+  https://raw.githubusercontent.com/codecool123/cachebuster.js/refs/heads/main/cachebuster.min.js
   ```
 
 You can also edit the code to check an API of your choice for a true/false response to cache or not. This may be handy.
