@@ -33,7 +33,7 @@ In order to add Cachebuster.js to your website, you must simply add a script wit
 
 ```html
 <head>
-  <script src="path/to/cachebuster.min.js></script>
+  <script src="path/to/cachebuster.min.js"></script>
   <!-- Other code here from the rest of your site's head. -->
 </head>
 ```
